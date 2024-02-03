@@ -11,11 +11,12 @@
         android:id="@+id/scannerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Open  OR Code Scanner"
+        android:text="Open BarCode Scanner"
         android:layout_marginTop="600dp"
         android:textStyle="bold"
+        android:textSize="20sp"
         android:background="@drawable/button_bg_design"
-        android:textColor="#FFCCBB" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/generatorQR"
@@ -23,9 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/scannerBtn"
         android:layout_marginTop="10dp"
-        android:textColor="#FEB2B4"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        android:textSize="20sp"
         android:background="@drawable/button_bg_design"
-        android:text="Open OR Code Generator" />
+        android:text="Open BarCode Generator" />
 
 </RelativeLayout>

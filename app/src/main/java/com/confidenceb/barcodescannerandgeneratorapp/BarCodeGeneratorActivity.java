@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.oned.Code128Writer;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 public class BarCodeGeneratorActivity extends AppCompatActivity {
@@ -42,9 +43,9 @@ public class BarCodeGeneratorActivity extends AppCompatActivity {
 
         if (!inputData.isEmpty()) {
             try {
-                // Generate QR code
-                QRCodeWriter writer = new QRCodeWriter();
-                BitMatrix bitMatrix = writer.encode(inputData, BarcodeFormat.QR_CODE, 512, 512);
+                // Generate barcode
+                Code128Writer writer = new Code128Writer();
+                BitMatrix bitMatrix = writer.encode(inputData, BarcodeFormat.CODE_128, 512, 256);
                 int width = bitMatrix.getWidth();
                 int height = bitMatrix.getHeight();
                 Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
